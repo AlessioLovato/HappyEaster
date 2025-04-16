@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Easter Egg -->
+  <ellipse id="egg" cx="200" cy="250" rx="100" ry="130" fill="#f8f8f8" stroke="#cccccc" stroke-width="2">
+    <animate attributeName="ry" values="130;120;110;100;90" dur="2s" begin="0s" fill="freeze" />
+    <animate attributeName="rx" values="100;110;120;125" dur="2s" begin="0s" fill="freeze" />
+  </ellipse>
+  
+  <!-- Egg Crack -->
+  <path id="crack" d="M 200,130 L 210,170 L 190,190 L 215,230 L 190,270" stroke="#333" stroke-width="2" fill="none" opacity="0">
+    <animate attributeName="opacity" values="0;0.2;0.5;0.8;1" dur="1s" begin="0.5s" fill="freeze" />
+  </path>
+  
+  <!-- Bunny Head -->
+  <circle id="head" cx="200" cy="200" r="40" fill="white" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1s" fill="freeze" />
+    <animate attributeName="cy" values="230;200;190" dur="1.5s" begin="1s" fill="freeze" />
+  </circle>
+  
+  <!-- Bunny Ears -->
+  <path id="ear-left" d="M 170,180 Q 160,120 180,100" stroke="#333" stroke-width="2" fill="white" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.5s" fill="freeze" />
+  </path>
+  <path id="ear-right" d="M 230,180 Q 240,120 220,100" stroke="#333" stroke-width="2" fill="white" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.5s" fill="freeze" />
+  </path>
+  
+  <!-- Bunny Eyes -->
+  <circle id="eye-left" cx="185" cy="195" r="5" fill="#ff0000" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2s" fill="freeze" />
+  </circle>
+  <circle id="eye-right" cx="215" cy="195" r="5" fill="#ff0000" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2s" fill="freeze" />
+  </circle>
+  
+  <!-- Bunny Nose -->
+  <ellipse id="nose" cx="200" cy="210" rx="5" ry="3" fill="#ffcccc" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2s" fill="freeze" />
+  </ellipse>
+  
+  <!-- Bunny Body (showing through crack) -->
+  <ellipse id="body" cx="200" cy="270" rx="30" ry="40" fill="white" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.2s" fill="freeze" />
+    <animate attributeName="cy" values="270;250;240" dur="1.5s" begin="1.2s" fill="freeze" />
+  </ellipse>
+  
+  <!-- Watchdogs-style glitch overlay -->
+  <rect id="glitch-effect" x="0" y="0" width="400" height="400" fill="url(#glitch-pattern)" opacity="0">
+    <animate attributeName="opacity" values="0;0.1;0.2;0.1;0.3;0.1;0" dur="3s" begin="0s" repeatCount="indefinite" />
+  </rect>
+  
+  <!-- Matrix-like code background -->
+  <defs>
+    <pattern id="glitch-pattern" patternUnits="userSpaceOnUse" width="400" height="400">
+      <text x="10" y="20" fill="#00ff00" font-family="monospace" font-size="10">01001001010101010100101010101</text>
+      <text x="10" y="40" fill="#00ff00" font-family="monospace" font-size="10">10101010101001010101010101010</text>
+      <text x="10" y="60" fill="#00ff00" font-family="monospace" font-size="10">01010101010101010101010101010</text>
+      <text x="10" y="80" fill="#00ff00" font-family="monospace" font-size="10">10101010101010101010101010101</text>
+      <text x="10" y="100" fill="#00ff00" font-family="monospace" font-size="10">01010101010101010101010101010</text>
+      <text x="10" y="120" fill="#00ff00" font-family="monospace" font-size="10">10101010101010101010101010101</text>
+      <text x="10" y="140" fill="#00ff00" font-family="monospace" font-size="10">01010101010101010101010101010</text>
+      <text x="10" y="160" fill="#00ff00" font-family="monospace" font-size="10">10101010101010101010101010101</text>
+      <text x="10" y="180" fill="#00ff00" font-family="monospace" font-size="10">01010101010101010101010101010</text>
+    </pattern>
+  </defs>
+  
+  <!-- Hacker text -->
+  <text id="hacked-text" x="200" y="350" text-anchor="middle" fill="#ff0000" font-family="monospace" font-weight="bold" font-size="20" opacity="0">
+    SYSTEM COMPROMISED
+    <animate attributeName="opacity" values="0;1;0;1;0;1" dur="2s" begin="2.5s" fill="freeze" />
+  </text>
+</svg>
