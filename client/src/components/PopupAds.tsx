@@ -49,7 +49,7 @@ export default function PopupAds() {
           scale: 0.6 + Math.random() * 0.5,
           imageIndex: Math.floor(Math.random() * popupImages.length),
           zIndex: 100 + i,
-          delay: i * 500
+          delay: i * 200
         });
       }
 

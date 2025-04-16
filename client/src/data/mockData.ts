@@ -14,17 +14,17 @@ export const thumbnails = [
 
 // Virus popup images from data/images folder
 export const virusImages = [
-  './data/images/1.jpeg',
-  './data/images/2.jpeg',
-  './data/images/3.jpeg',
-  './data/images/4.jpeg',
-  './data/images/5.jpeg',
-  './data/images/6.jpeg',
-  './data/images/7.jpeg',
-  './data/images/8.jpeg',
-  './data/images/9.jpeg',
-  './data/images/11.jpeg',
-  './data/images/12.jpeg'
+  '/src/data/images/1.jpeg',
+  '/src/data/images/2.jpeg',
+  '/src/data/images/3.jpeg',
+  '/src/data/images/4.jpeg',
+  '/src/data/images/5.jpeg',
+  '/src/data/images/6.jpeg',
+  '/src/data/images/7.jpeg',
+  '/src/data/images/8.jpeg',
+  '/src/data/images/9.jpeg',
+  '/src/data/images/11.jpeg',
+  '/src/data/images/12.jpeg'
 ];
 
 // Retro graphics for overlay

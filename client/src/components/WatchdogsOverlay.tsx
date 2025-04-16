@@ -24,10 +24,10 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
   ];
 
   useEffect(() => {
-    // Show overlay after delay
+    // Show overlay after shorter delay
     const timeout = setTimeout(() => {
       setShowOverlay(true);
-    }, startDelay);
+    }, 1000);
 
     return () => clearTimeout(timeout);
   }, [startDelay]);
