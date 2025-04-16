@@ -12,12 +12,19 @@ export const thumbnails = [
   'https://i3.ytimg.com/vi/LJbqOZ8KrOk/maxresdefault.jpg'
 ];
 
-// Virus popup images
+// Virus popup images from data/images folder
 export const virusImages = [
-  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><rect width="200" height="100" fill="red"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">VIRUS ALERT</text></svg>',
-  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><rect width="200" height="100" fill="blue"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">SYSTEM ERROR</text></svg>',
-  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><rect width="200" height="100" fill="purple"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">SECURITY BREACH</text></svg>',
-  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><rect width="200" height="100" fill="green"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">EASTER VIRUS</text></svg>'
+  './data/images/1.jpeg',
+  './data/images/2.jpeg',
+  './data/images/3.jpeg',
+  './data/images/4.jpeg',
+  './data/images/5.jpeg',
+  './data/images/6.jpeg',
+  './data/images/7.jpeg',
+  './data/images/8.jpeg',
+  './data/images/9.jpeg',
+  './data/images/11.jpeg',
+  './data/images/12.jpeg'
 ];
 
 // Retro graphics for overlay
