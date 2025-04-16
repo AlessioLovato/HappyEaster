@@ -1,0 +1,70 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Attiva il workflow a ogni push sul branch main
+  push:
+    branches: [ main ]
+  # Consente di eseguire questo workflow manualmente dalla tab Actions
+  workflow_dispatch:
+
+# Imposta le autorizzazioni GITHUB_TOKEN per consentire il deployment su GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Consente una sola implementazione alla volta
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build static site
+        run: |
+          # Aggiornare i percorsi delle immagini 
+          cd client/src/components
+          sed -i 's|/images/|./images/|g' PopupAds.tsx
+          sed -i 's|/src/assets/easter-bunny.svg|./easter-bunny.svg|g' WatchdogsOverlay.tsx
+          
+          # Costruire il sito
+          cd ../../..
+          npm run build
+          
+          # Copiare le risorse
+          mkdir -p dist/public/images
+          cp -r images/* dist/public/images/
+          cp client/src/assets/easter-bunny.svg dist/public/
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: 'dist/public'
+  
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
