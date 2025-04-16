@@ -11,7 +11,7 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
   const [glitchText, setGlitchText] = useState('');
   const [textIndex, setTextIndex] = useState(0);
   const [showPopups, setShowPopups] = useState(false);
-  
+
   const glitchMessages = [
     "INIZIALIZZAZIONE SEQUENZA HACK...",
     "AGGIRANDO SISTEMI DI SICUREZZA...",
@@ -35,11 +35,11 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
   // Typewriter effect for hacker text
   useEffect(() => {
     if (!showOverlay) return;
-    
+
     let currentText = '';
     let currentMessageIndex = 0;
     let charIndex = 0;
-    
+
     const typeInterval = setInterval(() => {
       if (currentMessageIndex >= glitchMessages.length) {
         clearInterval(typeInterval);
@@ -49,9 +49,9 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
         }, 1000);
         return;
       }
-      
+
       const message = glitchMessages[currentMessageIndex];
-      
+
       if (charIndex <= message.length) {
         currentText = message.substring(0, charIndex);
         setGlitchText(currentText);
@@ -65,7 +65,7 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
         }, 800); // Pause before next message
       }
     }, 60); // Speed of typing
-    
+
     return () => clearInterval(typeInterval);
   }, [showOverlay]);
 
@@ -88,17 +88,17 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
             }}
           />
         </div>
-        
+
         {/* Easter bunny animation */}
         <div className="relative z-10 w-[250px] h-[250px] md:w-[350px] md:h-[350px]">
           <object 
-            data="./easter-bunny.svg" 
+            data="./src/assets/easter-bunny.svg" 
             type="image/svg+xml"
             className="w-full h-full"
             aria-label="Easter Bunny Hack"
           />
         </div>
-        
+
         {/* Watchdogs-style terminal text */}
         <motion.div 
           className="hack-text relative z-10 font-mono text-green-500 text-lg md:text-2xl font-bold px-4 text-center"
@@ -109,7 +109,7 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
           <span className="inline-block min-h-[30px]">{glitchText}</span>
           <span className="animate-pulse ml-1">|</span>
         </motion.div>
-        
+
         {/* Progress bar */}
         {textIndex >= 3 && (
           <motion.div 
@@ -152,7 +152,7 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
             </motion.div>
           ))}
         </div>
-        
+
         {/* Popup ads overlay */}
         {showPopups && <PopupAds />}
       </motion.div>
