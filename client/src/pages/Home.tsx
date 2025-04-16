@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import VideoPlayer from "@/components/VideoPlayer";
 import RecommendedVideos from "@/components/RecommendedVideos";
-import VirusPopup from "@/components/VirusPopup";
+import WatchdogsOverlay from "@/components/WatchdogsOverlay";
 import ScanLine from "@/components/ScanLine";
 
 export default function Home() {
@@ -33,7 +33,7 @@ export default function Home() {
         </div>
       </div>
       
-      <VirusPopup videoElement={videoRef.current} />
+      <WatchdogsOverlay startDelay={3000} />
     </div>
   );
 }

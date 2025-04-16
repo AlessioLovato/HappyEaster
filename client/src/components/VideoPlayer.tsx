@@ -81,6 +81,7 @@ export default function VideoPlayer() {
     <div className="video-container w-full max-w-6xl mx-auto">
       <div className="aspect-video relative bg-black mb-3">
         <video 
+          id="main-video"
           ref={videoRef} 
           className="w-full h-full" 
           autoPlay 
