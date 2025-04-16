@@ -114,18 +114,18 @@ export default function WatchdogsOverlay({
         </motion.div>
 
         {/* Progress bar */}
-        {textIndex >= 3 && (
+        {textIndex >= 0 && (
           <motion.div
             className="mt-4 w-[80%] max-w-[600px] h-2 bg-gray-800 rounded-full overflow-hidden"
             initial={{ opacity: 0, width: "60%" }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
           >
             <motion.div
               className="h-full bg-red-500"
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
-              transition={{ delay: 2.5, duration: 4 }}
+              transition={{ delay: 0.5, duration: 4 }}
             />
           </motion.div>
         )}
