@@ -1,71 +1,83 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useMobile } from "@/hooks/use-mobile";
-import { FiSearch, FiMenu, FiVideo, FiBell, FiMic } from "react-icons/fi";
-import { FaYoutube } from "react-icons/fa";
+import { useState } from 'react';
+import { FiMenu, FiSearch, FiMic, FiBell, FiUser, FiVideo, FiGrid } from 'react-icons/fi';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 interface HeaderProps {
   toggleSidebar: () => void;
 }
 
 export default function Header({ toggleSidebar }: HeaderProps) {
-  const [searchValue, setSearchValue] = useState("");
-  const isMobile = useMobile();
-
+  const [searchFocused, setSearchFocused] = useState(false);
+  
   return (
-    <header className="fixed top-0 left-0 right-0 bg-[#0F0F0F] flex items-center justify-between p-2 h-14 z-40 border-b border-gray-700">
+    <header className="fixed top-0 left-0 right-0 h-14 bg-[#0F0F0F] flex items-center justify-between px-4 z-50 border-b border-[#272727]">
       <div className="flex items-center">
         <Button 
-          onClick={toggleSidebar} 
           variant="ghost" 
           size="icon" 
-          className="text-white md:ml-0"
+          onClick={toggleSidebar}
+          className="mr-4 text-xl"
         >
-          <FiMenu className="h-5 w-5" />
+          <FiMenu />
         </Button>
-        
-        <div className="flex items-center ml-2">
-          <FaYoutube className="text-[#FF0000] text-3xl mr-1" />
-          <span className="text-white font-medium text-xl">YouTube</span>
+        <div className="hidden sm:flex items-center">
+          <span className="font-bold text-xl">RetroTube</span>
+          <span className="ml-1 text-xs text-[#AAAAAA]">80s</span>
         </div>
       </div>
-
-      {!isMobile && (
-        <div className="flex items-center flex-grow justify-center mx-8">
-          <div className="flex w-full max-w-xl">
+      
+      <div className={`flex-1 max-w-[700px] mx-4 ${searchFocused ? 'md:mx-0' : ''}`}>
+        <div className="flex">
+          <div className="relative flex-1">
             <Input
               type="text"
               placeholder="Search"
-              className="p-2 pl-4 bg-[#272727] text-white rounded-l-full border border-gray-600 w-full focus:outline-none focus:border-blue-500"
-              value={searchValue}
-              onChange={(e) => setSearchValue(e.target.value)}
+              className="bg-[#121212] border-[#303030] rounded-l-full h-10 pl-4 pr-10 w-full focus:outline-none focus:ring-1 focus:ring-blue-500"
+              onFocus={() => setSearchFocused(true)}
+              onBlur={() => setSearchFocused(false)}
             />
-            <Button className="bg-gray-700 p-2 px-4 rounded-r-full border border-gray-600 border-l-0">
-              <FiSearch className="text-gray-300" />
-            </Button>
           </div>
-          <Button className="ml-4 bg-[#272727] p-2 rounded-full" size="icon" variant="ghost">
-            <FiMic className="text-white" />
+          <Button 
+            variant="ghost" 
+            className="bg-[#222222] h-10 px-5 rounded-r-full border border-l-0 border-[#303030]"
+          >
+            <FiSearch />
+          </Button>
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="ml-2 bg-[#181818] rounded-full h-10 w-10 hidden sm:flex"
+          >
+            <FiMic />
           </Button>
         </div>
-      )}
-
+      </div>
+      
       <div className="flex items-center">
-        {isMobile && (
-          <Button className="p-2" variant="ghost" size="icon">
-            <FiSearch className="text-white h-5 w-5" />
-          </Button>
-        )}
-        <Button className="p-2" variant="ghost" size="icon">
-          <FiVideo className="text-white h-5 w-5" />
+        <Button 
+          variant="ghost" 
+          size="icon" 
+          className="hidden sm:flex"
+        >
+          <FiVideo />
         </Button>
-        <Button className="p-2" variant="ghost" size="icon">
-          <FiBell className="text-white h-5 w-5" />
+        <Button 
+          variant="ghost" 
+          size="icon" 
+          className="hidden sm:flex"
+        >
+          <FiGrid />
         </Button>
-        <Button className="ml-2 w-8 h-8 rounded-full bg-purple-500 text-white flex items-center justify-center" size="icon">
+        <Button 
+          variant="ghost" 
+          size="icon"
+        >
+          <FiBell />
+        </Button>
+        <div className="h-8 w-8 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold ml-2">
           U
-        </Button>
+        </div>
       </div>
     </header>
   );

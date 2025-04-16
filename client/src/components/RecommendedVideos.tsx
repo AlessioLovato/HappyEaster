@@ -1,30 +1,33 @@
-import { Card } from "@/components/ui/card";
-import { recommendedVideos } from "@/data/mockData";
+import { useMobile } from '@/hooks/use-mobile';
+import { recommendedVideos } from '@/data/mockData';
 
 export default function RecommendedVideos() {
+  const isMobile = useMobile();
+  
   return (
-    <div className="recommended-videos px-4 mt-6">
-      <h2 className="text-lg font-bold mb-4">Recommended videos</h2>
+    <div className="w-full max-w-6xl mx-auto px-4 mt-10">
+      <h2 className="text-xl font-bold mb-4">Recommended Videos</h2>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {recommendedVideos.map((video, index) => (
-          <div key={index} className="video-preview mb-6">
-            <Card className="aspect-video bg-gray-800 mb-2 rounded-lg overflow-hidden relative border-0">
-              <img 
-                src={video.thumbnail} 
-                alt={`${video.title} thumbnail`} 
-                className="w-full h-full object-cover"
+          <div key={index} className="flex flex-col">
+            <div className="relative aspect-video bg-gray-800 rounded-lg overflow-hidden mb-2">
+              <div 
+                className="w-full h-full bg-cover bg-center" 
+                style={{ backgroundImage: `url(${video.thumbnail})` }}
               />
-              <div className="absolute bottom-1 right-1 bg-black bg-opacity-80 text-white text-xs px-1 rounded">
+              <div className="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1 rounded">
                 {video.duration}
               </div>
-            </Card>
+            </div>
             <div className="flex">
-              <div className={`w-8 h-8 rounded-full ${video.channelColor} mr-2 flex-shrink-0`}></div>
+              <div className="w-9 h-9 rounded-full bg-blue-600 flex-shrink-0 mr-2 flex items-center justify-center font-bold text-white">
+                {video.channel.charAt(0)}
+              </div>
               <div>
-                <h3 className="font-medium text-sm leading-tight">{video.title}</h3>
-                <p className="text-[#AAAAAA] text-xs mt-1">{video.channel}</p>
-                <p className="text-[#AAAAAA] text-xs">{video.views} • {video.uploadTime}</p>
+                <h3 className="text-sm font-medium line-clamp-2">{video.title}</h3>
+                <p className="text-xs text-[#AAAAAA] mt-1">{video.channel}</p>
+                <p className="text-xs text-[#AAAAAA]">{video.views} • {video.uploadTime}</p>
               </div>
             </div>
           </div>

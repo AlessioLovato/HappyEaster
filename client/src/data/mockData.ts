@@ -1,99 +1,114 @@
-// Video thumbnails
+// Mock data for the YouTube clone
+
+// Thumbnail URLs for recommended videos
 export const thumbnails = [
-  "https://images.unsplash.com/photo-1550745165-9bc0b252726f",
-  "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80",
-  "https://images.unsplash.com/photo-1560254937-d1c8582e9a58",
-  "https://images.unsplash.com/photo-1555864326-5cf22ef123cf",
-  "https://images.unsplash.com/photo-1598986646512-9330bcc4c0dc",
-  "https://images.unsplash.com/photo-1573343011427-3eb3b578b9b7"
+  'https://i3.ytimg.com/vi/LembwKDo1Dk/maxresdefault.jpg',
+  'https://i3.ytimg.com/vi/8tPnX7OPo0Q/maxresdefault.jpg',
+  'https://i3.ytimg.com/vi/963yUvnBYWw/maxresdefault.jpg',
+  'https://i3.ytimg.com/vi/2H1RZdiFnAw/maxresdefault.jpg',
+  'https://i3.ytimg.com/vi/vC7pN2XaSQw/maxresdefault.jpg',
+  'https://i3.ytimg.com/vi/KDxJlW6cxRk/maxresdefault.jpg',
+  'https://i3.ytimg.com/vi/OM0jfFoSpQM/maxresdefault.jpg',
+  'https://i3.ytimg.com/vi/LJbqOZ8KrOk/maxresdefault.jpg'
 ];
 
-// Virus images
+// Virus popup images
 export const virusImages = [
-  "https://images.unsplash.com/photo-1588129369854-9f025c3a2517",  // Digital glitch
-  "https://images.unsplash.com/photo-1508175800969-525c72a047dd",  // Digital text
-  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",      // Hacker screen
-  "https://images.unsplash.com/photo-1518770660439-4636190af475",   // Binary code
-  "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",   // Computer code
-  "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"    // Matrix effect
+  'https://i.imgur.com/KJ7GDc5.png',
+  'https://i.imgur.com/4LPqD6g.png',
+  'https://i.imgur.com/TvVzXxP.png',
+  'https://i.imgur.com/bHZpbIw.png'
 ];
 
-// 80s computer graphics
+// Retro graphics for overlay
 export const retroGraphics = [
-  "https://images.unsplash.com/photo-1563832704769-9e16b9d60302",   // Retro computer
-  "https://images.unsplash.com/photo-1542759564-7ccbb6ac450a",      // Glitch art
-  "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85",   // Retro screen
-  "https://images.unsplash.com/photo-1531297484001-80022131f5a1"    // Abstract digital
+  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" stroke="red" stroke-width="3" fill="none" /></svg>',
+  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect x="20" y="20" width="60" height="60" stroke="green" stroke-width="3" fill="none" /></svg>',
+  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><polygon points="50,20 80,80 20,80" stroke="blue" stroke-width="3" fill="none" /></svg>'
 ];
 
-// Virus messages
+// Virus popup messages
 export const virusMessages = [
-  "SYSTEM INFECTED",
-  "DATA CORRUPTED",
-  "VIRUS DETECTED",
-  "SECURITY BREACH",
-  "FILES ENCRYPTED",
-  "SYSTEM FAILURE",
-  "ACCESS DENIED",
-  "LOADING VIRUS...",
-  "ERROR 101",
-  "DISK DRIVE ERROR"
+  "WARNING: Your computer has been infected!",
+  "ALERT: System security compromised!",
+  "ERROR: Critical system failure detected!",
+  "DANGER: Hard drive being formatted...",
+  "SYSTEM: Downloading sensitive data...",
+  "VIRUS DETECTED: Click here to remove"
 ];
 
-// Recommended videos data
+// Recommended videos
 export const recommendedVideos = [
   {
-    title: "How Viruses Infected Early Networks",
-    channel: "Tech History",
-    views: "426K views",
+    title: "History of Computer Viruses from the 1980s",
+    channel: "RetroTech",
+    views: "1.2M views",
     uploadTime: "2 years ago",
-    duration: "8:42",
+    duration: "15:24",
     thumbnail: thumbnails[0],
-    channelColor: "bg-blue-500"
-  },
-  {
-    title: "The First Computer Worms of the 80s",
-    channel: "Retrobit Computing",
-    views: "1.1M views",
-    uploadTime: "3 years ago",
-    duration: "12:54",
-    thumbnail: thumbnails[1],
-    channelColor: "bg-green-500"
-  },
-  {
-    title: "BBS Systems and Early Internet Culture",
-    channel: "Vintage Tech",
-    views: "853K views",
-    uploadTime: "8 months ago",
-    duration: "15:27",
-    thumbnail: thumbnails[2],
     channelColor: "bg-red-500"
   },
   {
-    title: "Forgotten Animation Techniques of the 80s",
-    channel: "RetroGraphics",
-    views: "627K views",
+    title: "The Morris Worm: First Major Internet Attack",
+    channel: "VintageComputing",
+    views: "842K views",
     uploadTime: "1 year ago",
-    duration: "10:08",
+    duration: "12:38",
+    thumbnail: thumbnails[1],
+    channelColor: "bg-blue-500"
+  },
+  {
+    title: "Elk Cloner: The First PC Virus",
+    channel: "ComputerHistory",
+    views: "567K views",
+    uploadTime: "3 years ago",
+    duration: "8:15",
+    thumbnail: thumbnails[2],
+    channelColor: "bg-green-500"
+  },
+  {
+    title: "Brain Virus: The First MS-DOS Virus",
+    channel: "RetroTech",
+    views: "921K views",
+    uploadTime: "1 year ago",
+    duration: "10:42",
     thumbnail: thumbnails[3],
+    channelColor: "bg-red-500"
+  },
+  {
+    title: "Michelangelo Virus: Media Panic of 1992",
+    channel: "TechArchive",
+    views: "403K views",
+    uploadTime: "4 years ago",
+    duration: "14:03",
+    thumbnail: thumbnails[4],
     channelColor: "bg-yellow-500"
   },
   {
-    title: "The Morris Worm: First Major Cyber Attack",
-    channel: "Cyber History",
-    views: "2.3M views",
-    uploadTime: "4 years ago",
-    duration: "22:31",
-    thumbnail: thumbnails[4],
-    channelColor: "bg-purple-500"
+    title: "Jerusalem Virus: The Friday the 13th Threat",
+    channel: "VintageComputing",
+    views: "512K views",
+    uploadTime: "2 years ago",
+    duration: "11:27",
+    thumbnail: thumbnails[5],
+    channelColor: "bg-blue-500"
   },
   {
-    title: "Commodore 64: The Computer that Defined a Generation",
-    channel: "Computer Classics",
-    views: "1.7M views",
-    uploadTime: "5 years ago",
-    duration: "18:45",
-    thumbnail: thumbnails[5],
-    channelColor: "bg-indigo-500"
+    title: "DOS Boot Sector Viruses Explained",
+    channel: "ComputerHistory",
+    views: "389K views",
+    uploadTime: "3 years ago",
+    duration: "16:19",
+    thumbnail: thumbnails[6],
+    channelColor: "bg-green-500"
+  },
+  {
+    title: "ILOVEYOU Virus: The Email Worm That Infected Millions",
+    channel: "TechArchive",
+    views: "1.4M views",
+    uploadTime: "1 year ago",
+    duration: "18:22",
+    thumbnail: thumbnails[7],
+    channelColor: "bg-yellow-500"
   }
 ];

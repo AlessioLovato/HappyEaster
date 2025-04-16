@@ -98,10 +98,11 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
         
         {/* Easter bunny animation */}
         <div className="relative z-10 w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
-          <img 
-            src="/src/assets/easter-bunny.svg" 
-            alt="Easter Bunny Hack" 
-            className="w-full h-full" 
+          <object 
+            data="/src/assets/easter-bunny.svg" 
+            type="image/svg+xml"
+            className="w-full h-full"
+            aria-label="Easter Bunny Hack"
           />
         </div>
         
