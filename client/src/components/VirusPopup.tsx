@@ -47,7 +47,7 @@ export default function VirusPopup({
           if (Math.random() > 0.7) {
             applyRandomVideoEffect();
           }
-        }, 3000);
+        }, 5000);
 
         return () => clearInterval(effectsInterval);
       }, 3000);
