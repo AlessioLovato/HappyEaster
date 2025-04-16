@@ -139,10 +139,10 @@ export default function VideoPlayer() {
       </div>
       
       <div className="px-4">
-        <h1 className="text-xl font-bold mb-1">80s Computer Virus Documentary</h1>
+        <h1 className="text-xl font-bold mb-1">ATTENZIONE! Virus di Pasqua si Diffonde: Come Proteggersi</h1>
         <div className="flex justify-between items-start flex-wrap">
           <div className="text-[#AAAAAA] text-sm mb-4">
-            1.2M views • 3 years ago
+            1.2M visualizzazioni • 6 ore fa
           </div>
           <div className="flex items-center space-x-4 mb-4 flex-wrap">
             <Button variant="ghost" size="sm" className="flex items-center">
@@ -151,15 +151,15 @@ export default function VideoPlayer() {
             </Button>
             <Button variant="ghost" size="sm" className="flex items-center">
               <FiThumbsDown className="mr-2" />
-              <span>DISLIKE</span>
+              <span>NON MI PIACE</span>
             </Button>
             <Button variant="ghost" size="sm" className="flex items-center">
               <FiShare2 className="mr-2" />
-              <span>SHARE</span>
+              <span>CONDIVIDI</span>
             </Button>
             <Button variant="ghost" size="sm" className="flex items-center">
               <FiDownload className="mr-2" />
-              <span>SAVE</span>
+              <span>SALVA</span>
             </Button>
             <Button variant="ghost" size="icon">
               <FiMoreHorizontal />
@@ -170,24 +170,24 @@ export default function VideoPlayer() {
         <Separator className="my-4 bg-gray-700" />
         
         <div className="flex items-start mb-4 flex-wrap md:flex-nowrap">
-          <div className="w-10 h-10 rounded-full bg-purple-600 mr-3 flex-shrink-0 flex items-center justify-center font-bold">
-            R
+          <div className="w-10 h-10 rounded-full bg-red-600 mr-3 flex-shrink-0 flex items-center justify-center font-bold">
+            T
           </div>
           <div>
             <div className="flex items-center">
-              <h3 className="font-medium">RetroTech Channel</h3>
+              <h3 className="font-medium">TechItalia</h3>
               <span className="ml-2 text-xs bg-gray-600 rounded px-1">✓</span>
             </div>
-            <p className="text-sm text-[#AAAAAA]">542K subscribers</p>
+            <p className="text-sm text-[#AAAAAA]">542K iscritti</p>
             <p className="mt-2 text-sm">
-              This documentary explores the history of early computer viruses from the 1980s, how they spread, and their impact on early computing.
+              AVVISO URGENTE: Un nuovo virus sta si sta diffondendo tramite auguri di Pasqua online. Questo video mostra come riconoscerlo e proteggersi da questo pericoloso attacco informatico.
             </p>
             <Button variant="ghost" size="sm" className="mt-2 text-sm font-medium hover:text-[#AAAAAA] p-0">
-              SHOW MORE
+              MOSTRA ALTRO
             </Button>
           </div>
           <Button className="bg-[#FF0000] text-white rounded-full px-4 py-2 font-medium ml-auto mt-2 md:mt-0">
-            SUBSCRIBE
+            ISCRIVITI
           </Button>
         </div>
       </div>

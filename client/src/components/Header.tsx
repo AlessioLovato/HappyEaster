@@ -23,7 +23,7 @@ export default function Header({ toggleSidebar }: HeaderProps) {
         </Button>
         <div className="hidden sm:flex items-center">
           <span className="font-bold text-xl">RetroTube</span>
-          <span className="ml-1 text-xs text-[#AAAAAA]">80s</span>
+          <span className="ml-1 text-xs text-[#AAAAAA]">Italia</span>
         </div>
       </div>
       

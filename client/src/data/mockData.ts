@@ -29,84 +29,86 @@ export const retroGraphics = [
 
 // Virus popup messages
 export const virusMessages = [
-  "WARNING: Your computer has been infected!",
-  "ALERT: System security compromised!",
-  "ERROR: Critical system failure detected!",
-  "DANGER: Hard drive being formatted...",
-  "SYSTEM: Downloading sensitive data...",
-  "VIRUS DETECTED: Click here to remove"
+  "ATTENZIONE: Il tuo computer è stato infettato!",
+  "ALLARME: Sicurezza del sistema compromessa!",
+  "ERRORE: Rilevato errore critico di sistema!",
+  "PERICOLO: Formattazione dell'hard disk in corso...",
+  "SISTEMA: Download di dati sensibili in corso...",
+  "VIRUS PASQUALE RILEVATO: Clicca qui per rimuovere",
+  "AUGURI DI PASQUA: Virus festivo attivato!",
+  "CONIGLIO PASQUALE: Ha infettato il tuo sistema!"
 ];
 
-// Recommended videos
+// Recommended videos in Italian
 export const recommendedVideos = [
   {
-    title: "History of Computer Viruses from the 1980s",
-    channel: "RetroTech",
-    views: "1.2M views",
-    uploadTime: "2 years ago",
+    title: "URGENTE: Virus Di Pasqua Infetta Milioni Di Computer!",
+    channel: "TechItalia",
+    views: "1.2M visualizzazioni",
+    uploadTime: "2 giorni fa",
     duration: "15:24",
     thumbnail: thumbnails[0],
     channelColor: "bg-red-500"
   },
   {
-    title: "The Morris Worm: First Major Internet Attack",
-    channel: "VintageComputing",
-    views: "842K views",
-    uploadTime: "1 year ago",
+    title: "Il Coniglio di Pasqua Che Nasconde un Virus Letale",
+    channel: "InfoSicurezza",
+    views: "842K visualizzazioni",
+    uploadTime: "1 settimana fa",
     duration: "12:38",
     thumbnail: thumbnails[1],
     channelColor: "bg-blue-500"
   },
   {
-    title: "Elk Cloner: The First PC Virus",
-    channel: "ComputerHistory",
-    views: "567K views",
-    uploadTime: "3 years ago",
+    title: "Come Proteggere il PC dal Nuovo Virus Pasquale",
+    channel: "ComputerItalia",
+    views: "567K visualizzazioni",
+    uploadTime: "3 giorni fa",
     duration: "8:15",
     thumbnail: thumbnails[2],
     channelColor: "bg-green-500"
   },
   {
-    title: "Brain Virus: The First MS-DOS Virus",
-    channel: "RetroTech",
-    views: "921K views",
-    uploadTime: "1 year ago",
+    title: "Virus dell'Uovo di Pasqua: Come si Diffonde",
+    channel: "TechItalia",
+    views: "921K visualizzazioni",
+    uploadTime: "1 giorno fa",
     duration: "10:42",
     thumbnail: thumbnails[3],
     channelColor: "bg-red-500"
   },
   {
-    title: "Michelangelo Virus: Media Panic of 1992",
-    channel: "TechArchive",
-    views: "403K views",
-    uploadTime: "4 years ago",
+    title: "Auguri Pericolosi: Email di Pasqua con Virus",
+    channel: "ArchivioTech",
+    views: "403K visualizzazioni",
+    uploadTime: "4 giorni fa",
     duration: "14:03",
     thumbnail: thumbnails[4],
     channelColor: "bg-yellow-500"
   },
   {
-    title: "Jerusalem Virus: The Friday the 13th Threat",
-    channel: "VintageComputing",
-    views: "512K views",
-    uploadTime: "2 years ago",
+    title: "Il Virus del Coniglio Pasquale: Storia e Pericoli",
+    channel: "InfoSicurezza",
+    views: "512K visualizzazioni",
+    uploadTime: "2 settimane fa",
     duration: "11:27",
     thumbnail: thumbnails[5],
     channelColor: "bg-blue-500"
   },
   {
-    title: "DOS Boot Sector Viruses Explained",
-    channel: "ComputerHistory",
-    views: "389K views",
-    uploadTime: "3 years ago",
+    title: "Virus Pasquali: Gli Attacchi Più Devastanti",
+    channel: "ComputerItalia",
+    views: "389K visualizzazioni",
+    uploadTime: "3 settimane fa",
     duration: "16:19",
     thumbnail: thumbnails[6],
     channelColor: "bg-green-500"
   },
   {
-    title: "ILOVEYOU Virus: The Email Worm That Infected Millions",
-    channel: "TechArchive",
-    views: "1.4M views",
-    uploadTime: "1 year ago",
+    title: "ATTENZIONE! Il Coniglio di Pasqua è un Virus!",
+    channel: "ArchivioTech",
+    views: "1.4M visualizzazioni",
+    uploadTime: "1 ora fa",
     duration: "18:22",
     thumbnail: thumbnails[7],
     channelColor: "bg-yellow-500"
