@@ -1,6 +1,23 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { virusImages, virusMessages } from '@/data/mockData';
+import { virusMessages } from '@/data/mockData';
+
+// Image paths for popups
+const popupImages = [
+  '/images/1.jpeg',
+  '/images/2.jpeg',
+  '/images/3.jpeg',
+  '/images/4.jpeg',
+  '/images/5.jpeg',
+  '/images/6.jpeg',
+  '/images/7.jpeg',
+  '/images/8.jpeg',
+  '/images/9.jpeg',
+  '/images/11.jpeg',
+  '/images/12.jpeg'
+];
+
+const finalPopupImage = '/images/10.jpeg';
 
 interface Popup {
   id: number;
@@ -11,6 +28,7 @@ interface Popup {
   imageIndex: number;
   messageIndex: number;
   zIndex: number;
+  delay: number;
 }
 
 export default function PopupAds() {
@@ -22,28 +40,30 @@ export default function PopupAds() {
     const generatePopups = () => {
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
-      const popupCount = Math.max(5, Math.floor((screenWidth * screenHeight) / 50000)); // Scale with screen size
+      const popupCount = Math.max(8, Math.floor((screenWidth * screenHeight) / 40000)); // Scale with screen size
       const newPopups: Popup[] = [];
       
       for (let i = 0; i < popupCount; i++) {
         newPopups.push({
           id: i,
-          x: Math.random() * (screenWidth - 200), // Leave room for popup width
-          y: Math.random() * (screenHeight - 150), // Leave room for popup height
+          x: Math.random() * (screenWidth - 250), // Leave room for popup width
+          y: Math.random() * (screenHeight - 200), // Leave room for popup height
           rotation: (Math.random() - 0.5) * 10, // Slight random rotation for visual effect
-          scale: 0.7 + Math.random() * 0.5, // Random size between 70% and 120%
-          imageIndex: Math.floor(Math.random() * virusImages.length),
+          scale: 0.6 + Math.random() * 0.5, // Random size between 60% and 110%
+          imageIndex: Math.floor(Math.random() * popupImages.length),
           messageIndex: Math.floor(Math.random() * virusMessages.length),
-          zIndex: 100 + i // Stack them on top of each other
+          zIndex: 100 + i, // Stack them on top of each other
+          delay: i * 500 // 500ms delay between each popup
         });
       }
       
       setPopups(newPopups);
       
-      // Show final centered popup after a delay
+      // Show final centered popup after all popups are displayed
+      const totalDelay = (popupCount * 500) + 1000;
       setTimeout(() => {
         setShowFinalPopup(true);
-      }, 1500);
+      }, totalDelay);
     };
     
     generatePopups();
@@ -76,14 +96,14 @@ export default function PopupAds() {
             rotate: popup.rotation
           }}
           transition={{ 
-            delay: Math.random() * 0.5,
+            delay: popup.delay / 1000, // Convert ms to seconds for animation
             duration: 0.3,
             type: 'spring'
           }}
         >
           <div className="bg-white border-2 border-gray-800 rounded shadow-lg overflow-hidden w-[200px] max-w-[90vw]">
             <div className="bg-blue-700 text-white text-xs px-2 py-1 flex justify-between items-center">
-              <span>Warning!</span>
+              <span>Attenzione!</span>
               <div className="flex space-x-1">
                 <button className="w-3 h-3 bg-gray-300 rounded-full text-[8px] flex items-center justify-center">_</button>
                 <button className="w-3 h-3 bg-gray-300 rounded-full text-[8px] flex items-center justify-center">□</button>
@@ -92,7 +112,7 @@ export default function PopupAds() {
             </div>
             <div className="p-2">
               <img 
-                src={virusImages[popup.imageIndex]} 
+                src={popupImages[popup.imageIndex]} 
                 alt="Virus Alert" 
                 className="w-full h-20 object-cover object-center mb-2"
               />
@@ -101,7 +121,7 @@ export default function PopupAds() {
               </p>
               <div className="flex justify-center mt-1 space-x-1">
                 <button className="bg-gray-300 text-black text-[8px] px-2 py-1 rounded">OK</button>
-                <button className="bg-gray-300 text-black text-[8px] px-2 py-1 rounded">Cancel</button>
+                <button className="bg-gray-300 text-black text-[8px] px-2 py-1 rounded">Annulla</button>
               </div>
             </div>
           </div>
@@ -117,28 +137,26 @@ export default function PopupAds() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: 'spring', bounce: 0.4 }}
         >
-          <div className="bg-white border-4 border-red-600 rounded-lg shadow-2xl overflow-hidden w-[300px] max-w-[90vw]">
+          <div className="bg-white border-4 border-red-600 rounded-lg shadow-2xl overflow-hidden w-[350px] max-w-[90vw]">
             <div className="bg-red-600 text-white font-bold text-sm px-3 py-1 flex justify-between items-center">
-              <span>CRITICAL SYSTEM ALERT</span>
+              <span>ALLARME CRITICO DI SISTEMA</span>
               <div className="flex space-x-1">
                 <button className="w-4 h-4 bg-gray-300 rounded-full text-[10px] flex items-center justify-center">×</button>
               </div>
             </div>
             <div className="p-4">
-              <div className="flex justify-center mb-3">
-                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#FF0000" fillOpacity="0.2" stroke="#FF0000" strokeWidth="2"/>
-                  <path d="M12 8V13" stroke="#FF0000" strokeWidth="2" strokeLinecap="round"/>
-                  <circle cx="12" cy="16" r="1" fill="#FF0000"/>
-                </svg>
-              </div>
-              <h3 className="text-red-600 font-bold text-center mb-2">SYSTEM COMPROMISED!</h3>
+              <img 
+                src={finalPopupImage} 
+                alt="Virus di Pasqua" 
+                className="w-full h-auto object-contain mb-3"
+              />
+              <h3 className="text-red-600 font-bold text-center mb-2">SISTEMA COMPROMESSO!</h3>
               <p className="text-gray-700 text-xs text-center mb-3">
-                Your system has been infected with multiple viruses. Immediate action required!
+                Il tuo sistema è stato infettato da virus multipli di Pasqua. Azione immediata richiesta!
               </p>
               <div className="flex justify-center space-x-2">
-                <button className="bg-red-600 text-white text-xs font-bold px-4 py-2 rounded">REPAIR NOW</button>
-                <button className="bg-gray-200 text-gray-700 text-xs px-4 py-2 rounded">Cancel</button>
+                <button className="bg-red-600 text-white text-xs font-bold px-4 py-2 rounded">RIPARA ORA</button>
+                <button className="bg-gray-200 text-gray-700 text-xs px-4 py-2 rounded">Annulla</button>
               </div>
             </div>
           </div>
