@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PopupAds from "./PopupAds";
+import VirusPopup from "./VirusPopup";
 
 interface WatchdogsOverlayProps {
   startDelay?: number;
@@ -157,7 +158,7 @@ export default function WatchdogsOverlay({
         </div>
 
         {/* Popup ads overlay */}
-        {showPopups && <PopupAds />}
+        {showPopups && <VirusPopup />}
       </motion.div>
     </AnimatePresence>
   );
