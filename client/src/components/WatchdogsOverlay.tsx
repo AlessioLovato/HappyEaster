@@ -13,14 +13,14 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
   const [showPopups, setShowPopups] = useState(false);
   
   const glitchMessages = [
-    "INITIALIZING HACK SEQUENCE...",
-    "BYPASSING SECURITY...",
-    "INJECTING MALICIOUS CODE...",
-    "SYSTEM COMPROMISED",
-    "DOWNLOADING USER DATA...",
-    "UPLOADING VIRUS PAYLOAD...",
-    "HIJACKING VIDEO STREAM...",
-    "EASTER PROTOCOL ACTIVATED"
+    "INIZIALIZZAZIONE SEQUENZA HACK...",
+    "AGGIRANDO SISTEMI DI SICUREZZA...",
+    "INIEZIONE CODICE MALEVOLO...",
+    "SISTEMA COMPROMESSO",
+    "DOWNLOAD DATI UTENTE IN CORSO...",
+    "CARICAMENTO VIRUS IN CORSO...",
+    "DIROTTAMENTO FLUSSO VIDEO...",
+    "PROTOCOLLO PASQUALE ATTIVATO"
   ];
 
   useEffect(() => {
@@ -148,7 +148,7 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
                 delay: Math.random() * 5
               }}
             >
-              {`01${i}010101110101010101 HACK 1101010${i}01010101 SYS 01010101010`}
+              {`01${i}010101110101010101 PASQUA 1101010${i}01010101 VIRUS 01010101010`}
             </motion.div>
           ))}
         </div>

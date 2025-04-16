@@ -27,10 +27,10 @@ export default function Sidebar({ isOpen }: SidebarProps) {
       <div className="fixed left-0 top-14 bottom-0 w-[72px] bg-[#0F0F0F] z-40 hidden md:block">
         <div className="flex flex-col items-center py-3">
           <MenuItem icon={<FiHome />} label="Home" mini />
-          <MenuItem icon={<FiCompass />} label="Explore" mini />
+          <MenuItem icon={<FiCompass />} label="Esplora" mini />
           <MenuItem icon={<FiYoutube />} label="Shorts" mini />
-          <MenuItem icon={<FiPlay />} label="Subscriptions" mini />
-          <MenuItem icon={<FiClock />} label="Library" mini />
+          <MenuItem icon={<FiPlay />} label="Iscrizioni" mini />
+          <MenuItem icon={<FiClock />} label="Raccolta" mini />
         </div>
       </div>
     );
@@ -42,23 +42,23 @@ export default function Sidebar({ isOpen }: SidebarProps) {
       <div className="py-3">
         <div className="px-3 mb-2">
           <MenuItem icon={<FiHome />} label="Home" active />
-          <MenuItem icon={<FiCompass />} label="Explore" />
+          <MenuItem icon={<FiCompass />} label="Esplora" />
           <MenuItem icon={<FiYoutube />} label="Shorts" />
-          <MenuItem icon={<FiPlay />} label="Subscriptions" />
+          <MenuItem icon={<FiPlay />} label="Iscrizioni" />
         </div>
         
         <hr className="border-[#272727] my-2" />
         
         <div className="px-3 mb-2">
-          <MenuItem icon={<FiClock />} label="Library" />
-          <MenuItem icon={<FiClock />} label="History" />
-          <MenuItem icon={<FiThumbsUp />} label="Liked videos" />
+          <MenuItem icon={<FiClock />} label="Raccolta" />
+          <MenuItem icon={<FiClock />} label="Cronologia" />
+          <MenuItem icon={<FiThumbsUp />} label="Video piaciuti" />
         </div>
         
         <hr className="border-[#272727] my-2" />
         
         <div className="px-4 mb-2">
-          <h3 className="text-sm font-medium mb-1">Subscriptions</h3>
+          <h3 className="text-sm font-medium mb-1">Iscrizioni</h3>
           <ChannelItem name="RetroTech" color="bg-red-500" />
           <ChannelItem name="VintageComputing" color="bg-blue-500" />
           <ChannelItem name="OldSchoolGames" color="bg-green-500" />
@@ -69,10 +69,10 @@ export default function Sidebar({ isOpen }: SidebarProps) {
         <hr className="border-[#272727] my-2" />
         
         <div className="px-3 mb-2">
-          <h3 className="text-sm px-3 font-medium mb-1">Explore</h3>
-          <MenuItem icon={<FiMusic />} label="Music" />
-          <MenuItem icon={<FiFilm />} label="Movies" />
-          <MenuItem icon={<FiTv />} label="Gaming" />
+          <h3 className="text-sm px-3 font-medium mb-1">Esplora</h3>
+          <MenuItem icon={<FiMusic />} label="Musica" />
+          <MenuItem icon={<FiFilm />} label="Film" />
+          <MenuItem icon={<FiTv />} label="Videogiochi" />
         </div>
         
         <hr className="border-[#272727] my-2" />

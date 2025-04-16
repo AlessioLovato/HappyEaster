@@ -32,7 +32,7 @@ export default function Header({ toggleSidebar }: HeaderProps) {
           <div className="relative flex-1">
             <Input
               type="text"
-              placeholder="Search"
+              placeholder="Cerca"
               className="bg-[#121212] border-[#303030] rounded-l-full h-10 pl-4 pr-10 w-full focus:outline-none focus:ring-1 focus:ring-blue-500"
               onFocus={() => setSearchFocused(true)}
               onBlur={() => setSearchFocused(false)}
