@@ -12,16 +12,16 @@
   </path>
   
   <!-- Bunny Head -->
-  <circle id="head" cx="200" cy="200" r="40" fill="white" opacity="0">
+  <circle id="head" cx="200" cy="200" r="40" fill="#aaaaaa" opacity="0">
     <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1s" fill="freeze" />
     <animate attributeName="cy" values="230;200;190" dur="1.5s" begin="1s" fill="freeze" />
   </circle>
   
   <!-- Bunny Ears -->
-  <path id="ear-left" d="M 170,180 Q 160,120 180,100" stroke="#333" stroke-width="2" fill="white" opacity="0">
+  <path id="ear-left" d="M 170,180 Q 160,120 180,100" stroke="#333" stroke-width="2" fill="#aaaaaa" opacity="0">
     <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.5s" fill="freeze" />
   </path>
-  <path id="ear-right" d="M 230,180 Q 240,120 220,100" stroke="#333" stroke-width="2" fill="white" opacity="0">
+  <path id="ear-right" d="M 230,180 Q 240,120 220,100" stroke="#333" stroke-width="2" fill="#aaaaaa" opacity="0">
     <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.5s" fill="freeze" />
   </path>
   
@@ -39,9 +39,20 @@
   </ellipse>
   
   <!-- Bunny Body (showing through crack) -->
-  <ellipse id="body" cx="200" cy="270" rx="30" ry="40" fill="white" opacity="0">
+  <ellipse id="body" cx="200" cy="270" rx="30" ry="40" fill="#aaaaaa" opacity="0">
     <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.2s" fill="freeze" />
     <animate attributeName="cy" values="270;250;240" dur="1.5s" begin="1.2s" fill="freeze" />
+  </ellipse>
+  
+  <!-- Easter eggs -->
+  <ellipse id="egg1" cx="150" cy="300" rx="15" ry="20" fill="#ffccaa" stroke="#333" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.2s" fill="freeze" />
+  </ellipse>
+  <ellipse id="egg2" cx="250" cy="290" rx="15" ry="20" fill="#aaccff" stroke="#333" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.4s" fill="freeze" />
+  </ellipse>
+  <ellipse id="egg3" cx="180" cy="310" rx="12" ry="16" fill="#ccffaa" stroke="#333" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.6s" fill="freeze" />
   </ellipse>
   
   <!-- Watchdogs-style glitch overlay -->

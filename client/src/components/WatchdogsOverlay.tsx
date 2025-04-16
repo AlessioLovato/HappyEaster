@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import PopupAds from './PopupAds';
 
 interface WatchdogsOverlayProps {
   startDelay?: number;
@@ -9,6 +10,7 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
   const [showOverlay, setShowOverlay] = useState(false);
   const [glitchText, setGlitchText] = useState('');
   const [textIndex, setTextIndex] = useState(0);
+  const [showPopups, setShowPopups] = useState(false);
   
   const glitchMessages = [
     "INITIALIZING HACK SEQUENCE...",
@@ -41,6 +43,10 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
     const typeInterval = setInterval(() => {
       if (currentMessageIndex >= glitchMessages.length) {
         clearInterval(typeInterval);
+        // Show popups when text sequence finishes
+        setTimeout(() => {
+          setShowPopups(true);
+        }, 1000);
         return;
       }
       
@@ -73,19 +79,6 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        {/* Scan line effect */}
-        <motion.div 
-          className="absolute top-0 left-0 w-full h-[2px] bg-blue-400 opacity-80"
-          animate={{
-            top: ["0%", "100%"]
-          }}
-          transition={{
-            duration: 2,
-            ease: "linear",
-            repeat: Infinity,
-          }}
-        />
-        
         {/* Digital noise overlay */}
         <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
           <div className="w-full h-full" 
@@ -97,7 +90,7 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
         </div>
         
         {/* Easter bunny animation */}
-        <div className="relative z-10 w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
+        <div className="relative z-10 w-[250px] h-[250px] md:w-[350px] md:h-[350px]">
           <object 
             data="/src/assets/easter-bunny.svg" 
             type="image/svg+xml"
@@ -108,7 +101,7 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
         
         {/* Watchdogs-style terminal text */}
         <motion.div 
-          className="hack-text relative z-10 mt-8 font-mono text-green-500 text-lg md:text-2xl font-bold px-4 text-center"
+          className="hack-text relative z-10 font-mono text-green-500 text-lg md:text-2xl font-bold px-4 text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
@@ -120,7 +113,7 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
         {/* Progress bar */}
         {textIndex >= 3 && (
           <motion.div 
-            className="mt-6 w-[80%] max-w-[600px] h-2 bg-gray-800 rounded-full overflow-hidden"
+            className="mt-4 w-[80%] max-w-[600px] h-2 bg-gray-800 rounded-full overflow-hidden"
             initial={{ opacity: 0, width: "60%" }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2, duration: 0.5 }}
@@ -159,6 +152,9 @@ export default function WatchdogsOverlay({ startDelay = 3000 }: WatchdogsOverlay
             </motion.div>
           ))}
         </div>
+        
+        {/* Popup ads overlay */}
+        {showPopups && <PopupAds />}
       </motion.div>
     </AnimatePresence>
   );

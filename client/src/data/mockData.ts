@@ -14,10 +14,10 @@ export const thumbnails = [
 
 // Virus popup images
 export const virusImages = [
-  'https://i.imgur.com/KJ7GDc5.png',
-  'https://i.imgur.com/4LPqD6g.png',
-  'https://i.imgur.com/TvVzXxP.png',
-  'https://i.imgur.com/bHZpbIw.png'
+  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><rect width="200" height="100" fill="red"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">VIRUS ALERT</text></svg>',
+  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><rect width="200" height="100" fill="blue"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">SYSTEM ERROR</text></svg>',
+  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><rect width="200" height="100" fill="purple"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">SECURITY BREACH</text></svg>',
+  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><rect width="200" height="100" fill="green"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">EASTER VIRUS</text></svg>'
 ];
 
 // Retro graphics for overlay

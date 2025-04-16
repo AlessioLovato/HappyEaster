@@ -4,7 +4,6 @@ import Sidebar from "@/components/Sidebar";
 import VideoPlayer from "@/components/VideoPlayer";
 import RecommendedVideos from "@/components/RecommendedVideos";
 import WatchdogsOverlay from "@/components/WatchdogsOverlay";
-import ScanLine from "@/components/ScanLine";
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -22,7 +21,6 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#0F0F0F]">
       <Header toggleSidebar={toggleSidebar} />
-      <ScanLine />
       
       <div className="flex pt-14">
         <Sidebar isOpen={sidebarOpen} />
