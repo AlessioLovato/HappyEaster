@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <style>
+      #loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+        white-space: pre-line;
+      }
+      #root {
+        display: none;
+      }
+      footer {
+        margin-top: 20px;
+        font-family: Arial, sans-serif;
+        font-size: 0.9rem;
+        text-align: center;
+        color: #555;
+      }
+      footer a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">Ti stiamo reindirizzando al video su<br>RetroTube...</div>
+    <div id="root"></div>
+    <footer id="footer"></footer>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const loadingDiv = document.getElementById('loading');
+        const rootDiv = document.getElementById('root');
+        const footer = document.getElementById('footer');
+
+        const thumbnails = [
+          "https://images.unsplash.com/photo-1550745165-9bc0b252726f",
+          "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80",
+          "https://images.unsplash.com/photo-1560254937-d1c8582e9a58",
+          "https://images.unsplash.com/photo-1555864326-5cf22ef123cf",
+          "https://images.unsplash.com/photo-1598986646512-9330bcc4c0dc",
+          "https://images.unsplash.com/photo-1573343011427-3eb3b578b9b7"
+        ];
+
+        // Populate footer with references
+        footer.innerHTML = `Thumbnails images provided by: ${thumbnails
+          .map(
+            (url) =>
+              `<a href="${url}" target="_blank" rel="noopener noreferrer">Unsplash</a>`
+          )
+          .join(", ")}.`;
+
+        setTimeout(() => {
+          loadingDiv.style.display = 'none';
+          rootDiv.style.display = 'block';
+        }, 2000); // Simulate a delay before loading the module
+      });
+    </script>
+    <script type="module" src="../src/main.tsx"></script>
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+  </body>
+</html>
