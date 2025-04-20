@@ -180,7 +180,7 @@ export default function VideoPlayer() {
             </div>
             <p className="text-sm text-[#AAAAAA]">542K iscritti</p>
             <p className="mt-2 text-sm">
-              AVVISO URGENTE: Un nuovo virus sta si sta diffondendo tramite auguri di Pasqua online. Questo video mostra come riconoscerlo e proteggersi da questo pericoloso attacco informatico.
+              Un nuovo virus sta si sta diffondendo tramite auguri di Pasqua online. Questo video mostra come riconoscerlo e proteggersi da questo pericoloso attacco informatico.
             </p>
             <Button variant="ghost" size="sm" className="mt-2 text-sm font-medium hover:text-[#AAAAAA] p-0">
               MOSTRA ALTRO

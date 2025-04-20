@@ -7,7 +7,7 @@ interface WatchdogsOverlayProps {
 }
 
 export default function WatchdogsOverlay({
-  startDelay = 3000,
+  startDelay = 5000,
 }: WatchdogsOverlayProps) {
   const [showOverlay, setShowOverlay] = useState(false);
   const [glitchText, setGlitchText] = useState("");
@@ -29,7 +29,7 @@ export default function WatchdogsOverlay({
     // Show overlay after shorter delay
     const timeout = setTimeout(() => {
       setShowOverlay(true);
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timeout);
   }, [startDelay]);

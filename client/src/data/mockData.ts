@@ -2,14 +2,12 @@
 
 // Thumbnail URLs for recommended videos
 export const thumbnails = [
-  "https://i3.ytimg.com/vi/LembwKDo1Dk/maxresdefault.jpg",
-  "https://i3.ytimg.com/vi/8tPnX7OPo0Q/maxresdefault.jpg",
-  "https://i3.ytimg.com/vi/963yUvnBYWw/maxresdefault.jpg",
-  "https://i3.ytimg.com/vi/2H1RZdiFnAw/maxresdefault.jpg",
-  "https://i3.ytimg.com/vi/vC7pN2XaSQw/maxresdefault.jpg",
-  "https://i3.ytimg.com/vi/KDxJlW6cxRk/maxresdefault.jpg",
-  "https://i3.ytimg.com/vi/OM0jfFoSpQM/maxresdefault.jpg",
-  "https://i3.ytimg.com/vi/LJbqOZ8KrOk/maxresdefault.jpg",
+  "https://images.unsplash.com/photo-1550745165-9bc0b252726f",
+  "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80",
+  "https://images.unsplash.com/photo-1560254937-d1c8582e9a58",
+  "https://images.unsplash.com/photo-1555864326-5cf22ef123cf",
+  "https://images.unsplash.com/photo-1598986646512-9330bcc4c0dc",
+  "https://images.unsplash.com/photo-1573343011427-3eb3b578b9b7"
 ];
 
 // Retro graphics for overlay

@@ -70,7 +70,7 @@ export default function VirusPopup({ startDelay = 2000 }: VirusPopupProps) {
             isCentered: true,
           },
         ]);
-      }, 2000);
+      }, 1000);
     };
 
     const timer = setTimeout(showImagesSequentially, startDelay);

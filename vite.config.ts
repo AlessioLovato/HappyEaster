@@ -5,7 +5,7 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
-  base: "/HappyEaster/",
+  base: "/",
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -31,5 +31,14 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "client/index.html"),
+        proteggersi: path.resolve(
+          __dirname,
+          "client/proteggersi-dal-virus-di-pasqua.html"
+        ),
+      },
+    },
   },
 });
